@@ -8,9 +8,9 @@ public class Day_11 {
             int last_half= (int) (i%Math.pow(10,size/2));
             int first_half= (int) (i/Math.pow(10,size/2));
 
-
+            if(sum(last_half)==sum(first_half)) count++;
         }
-        return -1;
+        return count;
     }
 
     static int size(int num){
@@ -23,7 +23,13 @@ public class Day_11 {
     }
 
     static int sum(int num){
-        i
+        int sum=0;
+        while (num>0){
+            int rem=num%10;
+            sum+=rem;
+            num/=10;
+        }
+        return sum;
     }
 
 
