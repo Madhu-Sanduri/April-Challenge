@@ -5,6 +5,10 @@ public class day_13_count_good_numbers {
     public static int solution(long n){
         return (int) ((algo(5, (int) ((n+1)/2)) *algo(4, (int) (n/2)))%mod);
 //        return (int) (algo(5,(N+1)/2) * algo(4,N/2));
+
+
+
+
     }
 
     static long algo(int x,int y){
